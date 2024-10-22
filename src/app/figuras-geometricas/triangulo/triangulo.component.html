@@ -1,0 +1,23 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Triángulo Escaleno</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <form (ngSubmit)="calcularPerimetro()">
+      <ion-item>
+        <ion-label position="floating">Lado A</ion-label>
+        <ion-input type="number" [(ngModel)]="ladoA" name="ladoA"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Lado B</ion-label>
+        <ion-input type="number" [(ngModel)]="ladoB" name="ladoB"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Lado C</ion-label>
+        <ion-input type="number" [(ngModel)]="ladoC" name="ladoC"></ion-input>
+      </ion-item>
+      <ion-button type="submit">Calcular Perímetro</ion-button>
+    </form>
+    <p *ngIf="perimetro">El perímetro es: {{ perimetro }}</p>
+  </ion-card-content>
+</ion-card>
